@@ -6,6 +6,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import java.util.List;
+
 @SpringBootApplication
 public class SpringDataJpaApplication {
 
@@ -15,9 +17,27 @@ public class SpringDataJpaApplication {
 
         StudentRepository repository = context.getBean(StudentRepository.class);
 
-        Student robin = new Student(1L,"Robin");
+        // #1- We created first
+        //Student robin = new Student(1L,"Robin");
+        //repository.save(robin);
 
-        repository.save(robin);
+        // #2 - We search our creation
+        //List<Student> students = repository.findAll();
+        //for(Student student : students) {
+        //    System.out.println(student.getId() + " " + student.getFullName());
+        //}
+
+        // #3 - We update, same save() but now updation happens, cause id 1 already exists
+        //Student batman = new Student(1L, "Batman");
+        //repository.save(batman);
+        //List<Student> students = repository.findAll();
+        //for(Student student : students) {
+        //    System.out.println(student.getId() + " " + student.getFullName());
+        //}
+
+        // #4 - We delete
+        repository.deleteById(1L);
+
     }
 
 }

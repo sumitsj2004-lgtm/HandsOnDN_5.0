@@ -17,27 +17,26 @@ public class SpringDataJpaApplication {
 
         StudentRepository repository = context.getBean(StudentRepository.class);
 
-        // #1- We created first
-        //Student robin = new Student(1L,"Robin");
-        //repository.save(robin);
+        /*Student s1 = new Student(1L, "Robin", 22);
+        Student s2 = new Student(2L, "Bruce", 25);
+        Student s3 = new Student(3L, "Robert", 20);
 
-        // #2 - We search our creation
-        //List<Student> students = repository.findAll();
-        //for(Student student : students) {
-        //    System.out.println(student.getId() + " " + student.getFullName());
-        //}
+        repository.save(s1);
+        repository.save(s2);
+        repository.save(s3);*/
 
-        // #3 - We update, same save() but now updation happens, cause id 1 already exists
-        //Student batman = new Student(1L, "Batman");
-        //repository.save(batman);
-        //List<Student> students = repository.findAll();
-        //for(Student student : students) {
-        //    System.out.println(student.getId() + " " + student.getFullName());
-        //}
 
-        // #4 - We delete
-        repository.deleteById(1L);
-
+        //List<Student> students = repository.findByFullName("Robin");
+        //List<Student> students = repository.findByFullNameStartingWith("Rob");
+        //List<Student> students = repository.findByAgeGreaterThan(20);
+        //List<Student> students = repository.findStudentByName("Robin");
+        List<Student> students = repository.findStudentByNameNative("Robin");
+        for(Student stu : students){
+            System.out.println(
+                    stu.getId() + " " +
+                    stu.getFullName()+ " " +
+                    stu.getAge()
+            );
+        }
     }
-
 }

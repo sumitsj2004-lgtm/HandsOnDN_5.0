@@ -1,4 +1,4 @@
-# Spring Data JPA Learning Project
+# Learning Project
 
 > **Note:** This project is continuously updated.
 

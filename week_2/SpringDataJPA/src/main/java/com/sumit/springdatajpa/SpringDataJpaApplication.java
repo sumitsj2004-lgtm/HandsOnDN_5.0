@@ -30,13 +30,13 @@ public class SpringDataJpaApplication {
         //List<Student> students = repository.findByFullNameStartingWith("Rob");
         //List<Student> students = repository.findByAgeGreaterThan(20);
         //List<Student> students = repository.findStudentByName("Robin");
-        List<Student> students = repository.findStudentByNameNative("Robin");
-        for(Student stu : students){
-            System.out.println(
-                    stu.getId() + " " +
-                    stu.getFullName()+ " " +
-                    stu.getAge()
-            );
-        }
+//        List<Student> students = repository.findStudentByNameNative("Robin");
+//        for(Student stu : students){
+//            System.out.println(
+//                    stu.getId() + " " +
+//                    stu.getFullName()+ " " +
+//                    stu.getAge()
+//            );
+//        }
     }
 }

@@ -2,6 +2,7 @@ package com.sumit.springdatajpa.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Student {
@@ -10,6 +11,9 @@ public class Student {
     private Long id;
     private String fullName;
     private int age;
+
+    @ManyToOne
+    private Department department;
 
     public Student(){}
 

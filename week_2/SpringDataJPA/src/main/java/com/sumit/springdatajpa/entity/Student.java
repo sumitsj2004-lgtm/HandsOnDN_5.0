@@ -1,18 +1,18 @@
 package com.sumit.springdatajpa.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 @Entity
 public class Student {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String fullName;
     private int age;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     private Department department;
 
     public Student(){}
@@ -43,4 +43,7 @@ public class Student {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public Department getDepartment() { return department; }
+    public void setDepartment(Department department) { this.department = department; }
 }

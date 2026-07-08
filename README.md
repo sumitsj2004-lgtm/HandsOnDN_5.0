@@ -11,7 +11,7 @@ This project follows structure of the week wise topics covered in MASTERCLASS.
 
     The Structure is as follows:
 
-        Week 1 (In Progress)
+        Week 1 (Completed)
             • Design Patterns and Principles
             • Data Structures and Algorithms
             • PL/SQL Programming

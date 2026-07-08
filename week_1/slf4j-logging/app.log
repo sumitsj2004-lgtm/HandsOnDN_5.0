@@ -1,0 +1,3 @@
+11:09:09 INFO  com.cg.slf4j.AppenderExample - Application Started
+11:09:09 WARN  com.cg.slf4j.AppenderExample - This is a warning
+11:09:09 ERROR com.cg.slf4j.AppenderExample - This is an error

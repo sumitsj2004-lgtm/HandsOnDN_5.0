@@ -18,7 +18,7 @@ This project follows structure of the week wise topics covered in MASTERCLASS.
             • Test Driven Development
             • Logging Framework
         -------------------------------------------------------------
-        Week 2 (In-Progress)
+        Week 2 (Completed)
             • Spring Core and Maven
             • Spring Data JPA with Spring Boot
             • Hibernate

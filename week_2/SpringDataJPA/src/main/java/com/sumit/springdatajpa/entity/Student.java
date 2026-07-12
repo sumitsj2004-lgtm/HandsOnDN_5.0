@@ -15,10 +15,16 @@ public class Student {
 
     private int age;
 
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne(
+            cascade = CascadeType.PERSIST,
+            fetch = FetchType.LAZY
+    )
     private Department department;
 
-    @OneToOne(cascade = CascadeType.PERSIST)
+    @OneToOne(
+            cascade = CascadeType.PERSIST,
+            fetch = FetchType.LAZY
+    )
     private StudentIdCard studentIdCard;
 
     @ManyToMany

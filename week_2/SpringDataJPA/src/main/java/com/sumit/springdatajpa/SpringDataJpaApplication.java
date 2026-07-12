@@ -20,6 +20,12 @@ public class SpringDataJpaApplication {
 
         ConfigurableApplicationContext context = SpringApplication.run(SpringDataJpaApplication.class, args);
 
+        //relationshipExperiment(context);
+        //fetchExperiment(context);
+
+    }
+
+    private static void relationshipExperiment(ConfigurableApplicationContext context) {
         StudentRepository studentRepository = context.getBean(StudentRepository.class);
         DepartmentRepository departmentRepository = context.getBean(DepartmentRepository.class);
         CourseRepository courseRepository = context.getBean(CourseRepository.class);
@@ -62,5 +68,23 @@ public class SpringDataJpaApplication {
 
         studentRepository.save(luffy);
         studentRepository.save(robin);
+    }
+
+    private static void fetchExperiment(ConfigurableApplicationContext context) {
+
+        StudentRepository studentRepository = context.getBean(StudentRepository.class);
+
+        Student robin = studentRepository.findById(1L).orElseThrow();
+
+        System.out.println("Student loaded successfully.");
+
+        //----------------------------------------------------------------
+        /*
+            These both gives LazyInitializationException, cause the transaction is completed,
+            so the persistence context closes. When we tried to get department lazily, it threw
+            the lazy exception.
+        */
+        //System.out.println(robin.getDepartment().getName());
+        //System.out.println(robin.getStudentIdCard().getCardNumber());
     }
 }

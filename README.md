@@ -23,22 +23,22 @@ This project follows structure of the week wise topics covered in MASTERCLASS.
             • Spring Data JPA with Spring Boot
             • Hibernate
         -------------------------------------------------------------
-        Week 3 (In-Progress)
+        Week 3 (Completed)
             • Spring REST using Spring Boot 3
         -------------------------------------------------------------
-        Week 4 (To-Do)
+        Week 4 (Completed)
             • Code Quality and SonarQube
             • Microservices with Spring Boot 3 and Spring Cloud
         -------------------------------------------------------------
-        Week 5 (To-Do)
+        Week 5 (Completed)
             • React
         -------------------------------------------------------------
-        Week 6 (To-DO)
+        Week 6 (In-Progress)
             • React
             • Git
             • CI/CD
         -------------------------------------------------------------
-        Week 7 (To-Do)
+        Week 7 (In-Progress)
             • DevOps
             • Docker
             • Cloud
